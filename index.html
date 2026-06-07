@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HEROS METALIC SUPPLIES LLC | Industrial Excellence</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Inter:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .btn-primary {
+            background: linear-gradient(to bottom, #C8922A, #A6761D);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            filter: brightness(1.1);
+            letter-spacing: 0.1em;
+        }
+        .metal-card {
+            border: 1px solid #3A3A3A;
+            background: #111111;
+            transition: all 0.4s ease;
+        }
+        .metal-card:hover {
+            border-color: #C8922A;
+        }
+        .section-underline {
+            width: 0;
+            height: 2px;
+            background-color: #C8922A;
+        }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 24px;
+            transform-origin: center;
+        }
+        .project-masonry {
+            column-count: 1;
+        }
+        @media (min-width: 768px) { .project-masonry { column-count: 2; } }
+        @media (min-width: 1024px) { .project-masonry { column-count: 3; } }
+        
+        .technical-readout {
+            font-family: monospace;
+            border-bottom: 1px dotted #3A3A3A;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#f8bc51",
+                        "primary-container": "#c8922a",
+                        "surface": "#131313",
+                        "surface-alt": "#111111",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-surface": "#e5e2e1",
+                        "metal-highlight": "#3A3A3A",
+                        "pure-white": "#FFFFFF",
+                        "text-muted": "#A0A0A0"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "section-padding": "120px",
+                        "gutter": "24px",
+                        "mobile-margin": "20px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Bebas Neue"],
+                        "headline-xl": ["Bebas Neue"],
+                        "display-lg": ["Bebas Neue"],
+                        "body-md": ["Inter"],
+                        "label-bold": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "32px", "letterSpacing": "0.05em"}],
+                        "headline-xl": ["48px", {"lineHeight": "48px", "letterSpacing": "0.05em"}],
+                        "display-lg": ["80px", {"lineHeight": "80px", "letterSpacing": "0.1em"}],
+                        "body-md": ["16px", {"lineHeight": "24px"}],
+                        "label-bold": ["14px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 transition-all duration-500 ease-in-out bg-transparent border-b border-transparent h-20" id="top-nav">
+<div class="flex justify-between items-center px-mobile-margin md:px-gutter max-w-container-max mx-auto h-full">
+<div class="font-headline-lg text-headline-lg tracking-widest text-primary">
+                HEROS METALIC SUPPLIES LLC
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-body-md text-on-surface hover:text-primary transition-colors nav-link" href="#about">About Us</a>
+<a class="font-body-md text-on-surface hover:text-primary transition-colors nav-link" href="#services">Services</a>
+<a class="font-body-md text-on-surface hover:text-primary transition-colors nav-link" href="#projects">Projects</a>
+<a class="font-body-md text-on-surface hover:text-primary transition-colors nav-link" href="#contact">Contact</a>
+<button class="btn-primary text-on-primary-container px-6 py-2 font-headline-lg text-[18px]">GET QUOTE</button>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Hero Industrial Background" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbdKU3Se0kvCea1ckVHm0PwzxJZfdH4rYrfzMrqM_UeoXlxd9waJx4367Xd8ydz2Z23b8qbjqKx95PqQz6cr3bzSVqgUkJBubPF5wSDNBHcJzO-GKsUrwz9KjCEnUWyUctbJu6kdwx8AVMYfqdeDUqKaLHlxCChHIFuPaJ_IFHUak0CVvEmBJvlzrYi3q2ZhaY4EqpEI2mDISXDNVX5UeU1-je31QT2k4xhRyJtx_v4OYDZ9mAdRU_cFcXrN51lzU3I2iWPrxl3nPJ"/>
+<div class="absolute inset-0 bg-surface/70 backdrop-grayscale-[0.5]"></div>
+</div>
+<div class="relative z-10 text-center px-mobile-margin max-w-4xl">
+<h1 class="font-display-lg text-[50px] md:text-display-lg leading-tight mb-6 opacity-0 translate-y-10" id="hero-title">
+                FORGING STRENGTH.<br/>DELIVERING EXCELLENCE.
+            </h1>
+<p class="font-body-lg text-lg md:text-xl text-text-muted mb-10 max-w-2xl mx-auto opacity-0 translate-y-10" id="hero-subtext">
+                UAE's trusted partner in steel fabrication, metal supplies &amp; industrial structures. Engineering luxury with heavy metal precision.
+            </p>
+<div class="opacity-0 translate-y-10" id="hero-cta">
+<a class="btn-primary inline-block px-10 py-4 font-headline-lg text-2xl text-on-primary-container cursor-pointer" id="cta-view-work">
+                    VIEW OUR WORK
+                </a>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
+<span class="material-symbols-outlined text-primary text-4xl">keyboard_double_arrow_down</span>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-section-padding bg-surface-container-lowest relative overflow-hidden" id="about">
+<div class="max-w-container-max mx-auto px-mobile-margin grid md:grid-cols-2 gap-gutter items-center">
+<div>
+<h2 class="font-headline-xl text-headline-xl mb-2 section-title">About Heros Metalic Supplies LLC</h2>
+<div class="section-underline mb-8"></div>
+<p class="font-body-lg text-lg text-text-muted mb-6 leading-relaxed">
+                    Coming Soon — Our story is being crafted. We are establishing new benchmarks in the industrial landscape of the UAE, combining decades of structural expertise with a vision for architectural elegance.
+                </p>
+<div class="grid grid-cols-2 gap-4 mt-8">
+<div class="border-l-2 border-primary pl-4 py-2">
+<p class="text-primary font-headline-lg text-2xl">PRECISION</p>
+<p class="text-sm uppercase tracking-widest text-text-muted">Engineered</p>
+</div>
+<div class="border-l-2 border-primary pl-4 py-2">
+<p class="text-primary font-headline-lg text-2xl">DURABILITY</p>
+<p class="text-sm uppercase tracking-widest text-text-muted">Guaranteed</p>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 border border-metal-highlight group-hover:border-primary transition-colors duration-500"></div>
+<img alt="Steel Textures" class="w-full grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_xdw5ljpZjglcP14bJyuF9zzx6RiKgmLqIlxmY-79yVqgdbUKCoD1fX553zl5_ozoknC010_yIDxwaveal94w_xoos9NuwejxKGi7WIt7oqvQEKi46801SCk1wc4-Kqo_bclsw9XZApITFopx0GlfigVGM2XZFoPAZg2-cwrliimKMwDyhk5Yi9qUKmsRz96i3lJKaTJqQT6nOWkuRoMRG_tVbu4c1CoSUgQ3zK604ucVYY3bit5WPyc39wKXbMkeiVBhgvC8Q-Gu"/>
+</div>
+</div>
+</section>
+<!-- Stats Bar -->
+<section class="bg-surface-alt border-y border-metal-highlight py-16" id="stats-bar">
+<div class="max-w-container-max mx-auto px-mobile-margin">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+<div class="stat-item">
+<p class="text-primary font-headline-xl text-headline-xl mb-1"><span class="counter" data-target="25">0</span>+</p>
+<p class="font-label-bold text-label-bold uppercase text-text-muted">Years of Experience</p>
+</div>
+<div class="stat-item">
+<p class="text-primary font-headline-xl text-headline-xl mb-1"><span class="counter" data-target="47">0</span>+</p>
+<p class="font-label-bold text-label-bold uppercase text-text-muted">Projects Completed</p>
+</div>
+<div class="stat-item">
+<p class="text-primary font-headline-xl text-headline-xl mb-1"><span class="counter" data-target="100">0</span>+</p>
+<p class="font-label-bold text-label-bold uppercase text-text-muted">Happy Clients</p>
+</div>
+<div class="stat-item">
+<p class="text-primary font-headline-xl text-headline-xl mb-1"><span class="counter" data-target="11">0</span></p>
+<p class="font-label-bold text-label-bold uppercase text-text-muted">Service Categories</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-section-padding bg-surface" id="services">
+<div class="max-w-container-max mx-auto px-mobile-margin">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12">
+<div>
+<h2 class="font-headline-xl text-headline-xl mb-2 section-title">Expertise &amp; Services</h2>
+<div class="section-underline"></div>
+</div>
+<div class="mt-6 md:mt-0 flex gap-4 overflow-x-auto pb-2 no-scrollbar" id="service-filters">
+<button class="filter-btn active px-4 py-1 bg-primary text-on-primary-container font-label-bold text-xs uppercase cursor-pointer transition-all" data-filter="all">All Services</button>
+<button class="filter-btn px-4 py-1 bg-metal-highlight text-on-surface font-label-bold text-xs uppercase cursor-pointer hover:bg-primary/50 transition-all" data-filter="fabrication">Fabrication</button>
+<button class="filter-btn px-4 py-1 bg-metal-highlight text-on-surface font-label-bold text-xs uppercase cursor-pointer hover:bg-primary/50 transition-all" data-filter="industrial">Industrial</button>
+<button class="filter-btn px-4 py-1 bg-metal-highlight text-on-surface font-label-bold text-xs uppercase cursor-pointer hover:bg-primary/50 transition-all" data-filter="architectural">Architectural</button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 service-grid" id="service-container">
+<!-- Service Cards -->
+<div class="service-card metal-card p-8 group" data-category="industrial">
+<span class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">architecture</span>
+<h3 class="font-headline-lg text-headline-lg text-pure-white mb-2">Steel Structure Works</h3>
+<p class="text-text-muted text-sm">Heavy-duty structural frames engineered for industrial and commercial longevity.</p>
+</div>
+<div class="service-card metal-card p-8 group" data-category="industrial">
+<span class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">fence</span>
+<h3 class="font-headline-lg text-headline-lg text-pure-white mb-2">Barriers</h3>
+<p class="text-text-muted text-sm">High-security perimeter solutions and industrial safety barriers.</p>
+</div>
+<div class="service-card metal-card p-8 group" data-category="fabrication">
+<span class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">construction</span>
+<h3 class="font-headline-lg text-headline-lg text-pure-white mb-2">Steel Building Materials</h3>
+<p class="text-text-muted text-sm">Premium grade steel components for diverse construction needs.</p>
+</div>
+<div class="service-card metal-card p-8 group" data-category="architectural">
+<span class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">stairs</span>
+<h3 class="font-headline-lg text-headline-lg text-pure-white mb-2">Handrails</h3>
+<p class="text-text-muted text-sm">Aesthetic and functional railings for architectural projects.</p>
+</div>
+<div class="service-card metal-card p-8 group" data-category="industrial">
+<span class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">videocam</span>
+<h3 class="font-headline-lg text-headline-lg text-pure-white mb-2">Camera Pole</h3>
+<p class="text-text-muted text-sm">Vibration-resistant mounting structures for surveillance systems.</p>
+</div>
+<div class="service-card metal-card p-8 group" data-category="fabrication">
+<span class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">weekend</span>
+<h3 class="font-headline-lg text-headline-lg text-pure-white mb-2">Steel Furniture</h3>
+<p class="text-text-muted text-sm">Custom industrial-grade furniture with high-end finishing.</p>
+</div>
+<div class="service-card metal-card p-8 group" data-category="architectural">
+<span class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">design_services</span>
+<h3 class="font-headline-lg text-headline-lg text-pure-white mb-2">Interior Works</h3>
+<p class="text-text-muted text-sm">Specialized metal accents and decorative interior metalwork.</p>
+</div>
+<div class="service-card metal-card p-8 group" data-category="fabrication">
+<span class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">precision_manufacturing</span>
+<h3 class="font-headline-lg text-headline-lg text-pure-white mb-2">Machining Work</h3>
+<p class="text-text-muted text-sm">High-precision CNC and manual machining for complex parts.</p>
+</div>
+<div class="service-card metal-card p-8 group" data-category="fabrication">
+<span class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">water_drop</span>
+<h3 class="font-headline-lg text-headline-lg text-pure-white mb-2">Waterjet</h3>
+<p class="text-text-muted text-sm">Cold cutting precision for materials that cannot withstand heat.</p>
+</div>
+<div class="service-card metal-card p-8 group" data-category="industrial">
+<span class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">format_paint</span>
+<h3 class="font-headline-lg text-headline-lg text-pure-white mb-2">Powder Coating</h3>
+<p class="text-text-muted text-sm">Durable, high-quality finishes for long-lasting corrosion protection.</p>
+</div>
+<div class="service-card metal-card p-8 group lg:col-span-2" data-category="industrial">
+<span class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">bolt</span>
+<h3 class="font-headline-lg text-headline-lg text-pure-white mb-2">Electro Galvanize</h3>
+<p class="text-text-muted text-sm">Protective zinc coating for steel components to prevent oxidation in harsh UAE environments.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section class="py-section-padding bg-surface-container-lowest" id="projects">
+<div class="max-w-container-max mx-auto px-mobile-margin">
+<h2 class="font-headline-xl text-headline-xl mb-2 section-title">Featured Portfolio</h2>
+<div class="section-underline mb-12"></div>
+<div class="project-masonry" id="project-gallery">
+<!-- Project Item 1 -->
+<div class="masonry-item relative group overflow-hidden">
+<div class="aspect-video bg-metal-highlight relative overflow-hidden">
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+<div class="absolute inset-0 flex items-center justify-center p-8">
+<h4 class="font-headline-lg text-primary text-center">BOLLYWOOD PARK</h4>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 bg-surface/90 border-t border-primary p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+<p class="font-label-bold text-xs uppercase text-primary">Dubai, UAE</p>
+<p class="text-on-surface font-headline-lg">Structural Steel Work</p>
+</div>
+</div>
+<!-- Project Item 2 -->
+<div class="masonry-item relative group overflow-hidden">
+<div class="aspect-square bg-metal-highlight relative overflow-hidden">
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')] opacity-30"></div>
+<div class="absolute inset-0 flex items-center justify-center p-8">
+<h4 class="font-headline-lg text-primary text-center">ASPEN POLYSTYRENE</h4>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 bg-surface/90 border-t border-primary p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+<p class="font-label-bold text-xs uppercase text-primary">Industrial Area</p>
+<p class="text-on-surface font-headline-lg">Fabrication Project</p>
+</div>
+</div>
+<!-- Project Item 3 -->
+<div class="masonry-item relative group overflow-hidden">
+<div class="aspect-video bg-metal-highlight relative overflow-hidden">
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/diagonal-striped-brick.png')] opacity-20"></div>
+<div class="absolute inset-0 flex items-center justify-center p-8">
+<h4 class="font-headline-lg text-primary text-center">BLUE WATER MASJID</h4>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 bg-surface/90 border-t border-primary p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+<p class="font-label-bold text-xs uppercase text-primary">Bluewaters Island</p>
+<p class="text-on-surface font-headline-lg">Decorative Metalwork</p>
+</div>
+</div>
+<!-- Project Item 4 -->
+<div class="masonry-item relative group overflow-hidden">
+<div class="aspect-[4/5] bg-metal-highlight relative overflow-hidden">
+<div class="absolute inset-0 flex items-center justify-center p-8">
+<h4 class="font-headline-lg text-primary text-center">SHARJAH SPORTS CLUB</h4>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 bg-surface/90 border-t border-primary p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+<p class="font-label-bold text-xs uppercase text-primary">Sharjah, UAE</p>
+<p class="text-on-surface font-headline-lg">Grandstand Rails</p>
+</div>
+</div>
+<!-- More Projects placeholder -->
+<div class="masonry-item relative group overflow-hidden">
+<div class="aspect-video bg-metal-highlight flex items-center justify-center p-8">
+<h4 class="font-headline-lg text-primary text-center">EXPO 2020 STRUCTURES</h4>
+</div>
+</div>
+<div class="masonry-item relative group overflow-hidden">
+<div class="aspect-square bg-metal-highlight flex items-center justify-center p-8">
+<h4 class="font-headline-lg text-primary text-center">MEYDAN RACETRACK RAILS</h4>
+</div>
+</div>
+<!-- Display 47 count message -->
+<div class="masonry-item relative group overflow-hidden col-span-full">
+<div class="aspect-video bg-metal-highlight flex items-center justify-center border-2 border-dashed border-primary/30">
+<div class="text-center">
+<h4 class="font-headline-lg text-primary text-4xl">AND 41+ MORE PROJECTS</h4>
+<p class="text-text-muted uppercase tracking-widest text-xs mt-2">Delivered across the Emirates</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-padding bg-surface border-t border-metal-highlight" id="contact">
+<div class="max-w-container-max mx-auto px-mobile-margin">
+<div class="grid lg:grid-cols-2 gap-16">
+<div>
+<h2 class="font-headline-xl text-headline-xl mb-2 section-title">Connect with Our Engineers</h2>
+<div class="section-underline mb-10"></div>
+<div class="space-y-8">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">location_on</span>
+<div>
+<p class="font-label-bold text-label-bold uppercase text-primary mb-1">Headquarters</p>
+<p class="text-lg">Industrial Area 13, Sharjah, United Arab Emirates</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">call</span>
+<div>
+<p class="font-label-bold text-label-bold uppercase text-primary mb-1">Direct Line</p>
+<p class="text-lg">+971 6 5583854</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">mail</span>
+<div>
+<p class="font-label-bold text-label-bold uppercase text-primary mb-1">Email</p>
+<p class="text-lg">info@herosmetalic.ae</p>
+</div>
+</div>
+</div>
+<div class="mt-12 h-[300px] border border-metal-highlight overflow-hidden grayscale">
+<iframe frameborder="0" height="100%" marginheight="0" marginwidth="0" scrolling="no" src="https://maps.google.com/maps?q=Industrial%20Area%2013,%20Sharjah&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" width="100%">
+</iframe>
+</div>
+</div>
+<div class="bg-surface-alt p-10 border border-metal-highlight relative">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-8xl">precision_manufacturing</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg mb-8">Request Technical Quotation</h3>
+<form class="space-y-6">
+<div>
+<label class="block text-xs uppercase font-label-bold text-text-muted mb-2">Full Name</label>
+<input class="w-full bg-surface-container-lowest border-0 border-b border-metal-highlight focus:border-primary focus:ring-0 text-on-surface py-3" type="text"/>
+</div>
+<div>
+<label class="block text-xs uppercase font-label-bold text-text-muted mb-2">Company Name</label>
+<input class="w-full bg-surface-container-lowest border-0 border-b border-metal-highlight focus:border-primary focus:ring-0 text-on-surface py-3" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div>
+<label class="block text-xs uppercase font-label-bold text-text-muted mb-2">Email Address</label>
+<input class="w-full bg-surface-container-lowest border-0 border-b border-metal-highlight focus:border-primary focus:ring-0 text-on-surface py-3" type="email"/>
+</div>
+<div>
+<label class="block text-xs uppercase font-label-bold text-text-muted mb-2">Phone Number</label>
+<input class="w-full bg-surface-container-lowest border-0 border-b border-metal-highlight focus:border-primary focus:ring-0 text-on-surface py-3" type="tel"/>
+</div>
+</div>
+<div>
+<label class="block text-xs uppercase font-label-bold text-text-muted mb-2">Project Details</label>
+<textarea class="w-full bg-surface-container-lowest border-0 border-b border-metal-highlight focus:border-primary focus:ring-0 text-on-surface py-3 resize-none" rows="4"></textarea>
+</div>
+<button class="w-full btn-primary py-4 font-headline-lg text-xl text-on-primary-container" type="submit">SEND INQUIRY</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t-2 border-primary py-16">
+<div class="max-w-container-max mx-auto px-mobile-margin flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="font-headline-xl text-headline-xl text-pure-white uppercase tracking-widest">
+                HEROS METALIC
+            </div>
+<div class="flex gap-8">
+<a class="text-secondary hover:text-pure-white hover:tracking-widest transition-all duration-300 font-label-bold text-xs uppercase" href="#">Privacy Policy</a>
+<a class="text-secondary hover:text-pure-white hover:tracking-widest transition-all duration-300 font-label-bold text-xs uppercase" href="#">Terms of Service</a>
+<a class="text-secondary hover:text-pure-white hover:tracking-widest transition-all duration-300 font-label-bold text-xs uppercase" href="#">Safety Standards</a>
+<a class="text-secondary hover:text-pure-white hover:tracking-widest transition-all duration-300 font-label-bold text-xs uppercase" href="#">Technical Specs</a>
+</div>
+<div class="text-text-muted text-xs font-label-bold">
+                © 2024 HEROS METALIC SUPPLIES LLC. ALL RIGHTS RESERVED.
+            </div>
+</div>
+</footer>
+<script>
+        // Smooth Scroll initialization
+        const lenis = new Lenis();
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // GSAP Animations
+        gsap.registerPlugin(ScrollTrigger);
+
+        // 1. Navbar Transition to #0a0a0a
+        ScrollTrigger.create({
+            start: "top -100",
+            onEnter: () => {
+                gsap.to("#top-nav", {
+                    backgroundColor: "#0a0a0a",
+                    backdropFilter: "blur(12px)",
+                    borderBottomColor: "#3A3A3A",
+                    duration: 0.5,
+                    ease: "power2.out"
+                });
+            },
+            onLeaveBack: () => {
+                gsap.to("#top-nav", {
+                    backgroundColor: "transparent",
+                    backdropFilter: "blur(0px)",
+                    borderBottomColor: "transparent",
+                    duration: 0.5,
+                    ease: "power2.inOut"
+                });
+            }
+        });
+
+        // 3. CTA Smooth Scroll
+        document.getElementById('cta-view-work').addEventListener('click', () => {
+            lenis.scrollTo('#projects');
+        });
+
+        // Nav Links Smooth Scroll
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = link.getAttribute('href');
+                lenis.scrollTo(target);
+            });
+        });
+
+        // 2. Services Filtering Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const serviceCards = document.querySelectorAll('.service-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.getAttribute('data-filter');
+                
+                // Update button styles
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-primary', 'text-on-primary-container');
+                    b.classList.add('bg-metal-highlight', 'text-on-surface');
+                });
+                btn.classList.remove('bg-metal-highlight', 'text-on-surface');
+                btn.classList.add('bg-primary', 'text-on-primary-container');
+
+                // Animate Grid
+                gsap.to(serviceCards, {
+                    scale: 0.8,
+                    opacity: 0,
+                    duration: 0.3,
+                    stagger: 0.05,
+                    onComplete: () => {
+                        serviceCards.forEach(card => {
+                            if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                                card.style.display = 'block';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        });
+                        gsap.to(".service-card:visible", {
+                            scale: 1,
+                            opacity: 1,
+                            duration: 0.5,
+                            stagger: 0.05,
+                            ease: "back.out(1.2)"
+                        });
+                    }
+                });
+            });
+        });
+
+        // 6. Section Underline 'Drawing' Animation
+        document.querySelectorAll('.section-title').forEach(title => {
+            const underline = title.nextElementSibling;
+            gsap.fromTo(underline, 
+                { width: 0 },
+                {
+                    width: "120px",
+                    scrollTrigger: {
+                        trigger: title,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    },
+                    duration: 1.2,
+                    ease: "power4.out"
+                }
+            );
+        });
+
+        // 4. Stats Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        counters.forEach(counter => {
+            const target = +counter.getAttribute('data-target');
+            gsap.fromTo(counter, 
+                { innerText: 0 },
+                {
+                    innerText: target,
+                    duration: 2.5,
+                    snap: { innerText: 1 },
+                    scrollTrigger: {
+                        trigger: counter,
+                        start: "top 90%",
+                    },
+                    ease: "power2.out"
+                }
+            );
+        });
+
+        // 5. Project Masonry Scale-in Animation
+        gsap.from(".masonry-item", {
+            scale: 0.8,
+            opacity: 0,
+            y: 30,
+            duration: 0.8,
+            stagger: 0.1,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".project-masonry",
+                start: "top 80%"
+            }
+        });
+
+        // Hero Entrance
+        const tlHero = gsap.timeline();
+        tlHero.to("#hero-title", { opacity: 1, y: 0, duration: 1.2, ease: "power4.out", delay: 0.2 })
+              .to("#hero-subtext", { opacity: 1, y: 0, duration: 1, ease: "power3.out" }, "-=0.8")
+              .to("#hero-cta", { opacity: 1, y: 0, duration: 1, ease: "back.out(1.7)" }, "-=0.6");
+
+        // Helper for selecting visible elements
+        jQuery = (selector) => document.querySelectorAll(selector);
+    </script>
+</body></html>
