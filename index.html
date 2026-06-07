@@ -41,11 +41,11 @@
             transform-origin: center;
         }
         .project-masonry {
-            column-count: 1;
+            display: flex;
+            gap: 24px;
+            width: max-content;
+            align-items: stretch;
         }
-        @media (min-width: 768px) { .project-masonry { column-count: 2; } }
-        @media (min-width: 1024px) { .project-masonry { column-count: 3; } }
-        
         .technical-readout {
             font-family: monospace;
             border-bottom: 1px dotted #3A3A3A;
@@ -190,6 +190,54 @@
 </div>
 </div>
 </section>
+<!-- Horizontal Process Rail -->
+<section class="py-section-padding bg-surface-container-lowest overflow-hidden" id="process">
+<div class="max-w-container-max mx-auto px-mobile-margin">
+<div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-10">
+<div>
+<h2 class="font-headline-xl text-headline-xl mb-2 section-title">Built to Flow</h2>
+<div class="section-underline"></div>
+</div>
+<p class="text-text-muted max-w-2xl leading-relaxed">
+                    Keep scrolling vertically and this section will glide sideways through the workflow. It turns a normal scroll into a cinematic rail.
+                </p>
+</div>
+<div class="relative">
+<div class="flex gap-6 pb-4 w-max will-change-transform" id="process-rail" tabindex="0">
+<article class="metal-card snap-start flex-none w-[85vw] sm:w-[420px] p-8 md:p-10">
+<p class="text-xs uppercase tracking-[0.35em] text-primary mb-4">01 / Consult</p>
+<h3 class="font-headline-lg text-headline-lg text-pure-white mb-3">Scope &amp; Strategy</h3>
+<p class="text-text-muted leading-relaxed mb-6">We review drawings, site needs, and technical constraints to define the right metal solution before fabrication begins.</p>
+<div class="technical-readout flex justify-between gap-4 text-sm py-3"><span class="text-primary">Inputs</span><span class="text-on-surface">Drawings, site data, load needs</span></div>
+</article>
+<article class="metal-card snap-start flex-none w-[85vw] sm:w-[420px] p-8 md:p-10">
+<p class="text-xs uppercase tracking-[0.35em] text-primary mb-4">02 / Design</p>
+<h3 class="font-headline-lg text-headline-lg text-pure-white mb-3">Precision Drafting</h3>
+<p class="text-text-muted leading-relaxed mb-6">Our team converts concepts into buildable details with clean tolerances, material choices, and execution logic.</p>
+<div class="technical-readout flex justify-between gap-4 text-sm py-3"><span class="text-primary">Output</span><span class="text-on-surface">Shop-ready fabrication plan</span></div>
+</article>
+<article class="metal-card snap-start flex-none w-[85vw] sm:w-[420px] p-8 md:p-10">
+<p class="text-xs uppercase tracking-[0.35em] text-primary mb-4">03 / Fabricate</p>
+<h3 class="font-headline-lg text-headline-lg text-pure-white mb-3">Cut, Weld, Shape</h3>
+<p class="text-text-muted leading-relaxed mb-6">Steel is cut, formed, welded, and machined with industrial consistency and an emphasis on structural strength.</p>
+<div class="technical-readout flex justify-between gap-4 text-sm py-3"><span class="text-primary">Core</span><span class="text-on-surface">Shop-floor execution</span></div>
+</article>
+<article class="metal-card snap-start flex-none w-[85vw] sm:w-[420px] p-8 md:p-10">
+<p class="text-xs uppercase tracking-[0.35em] text-primary mb-4">04 / Finish</p>
+<h3 class="font-headline-lg text-headline-lg text-pure-white mb-3">Coat &amp; Protect</h3>
+<p class="text-text-muted leading-relaxed mb-6">Powder coating, galvanizing, and detailing give every component a sharp look and long service life.</p>
+<div class="technical-readout flex justify-between gap-4 text-sm py-3"><span class="text-primary">Protection</span><span class="text-on-surface">Anti-corrosion finish</span></div>
+</article>
+<article class="metal-card snap-start flex-none w-[85vw] sm:w-[420px] p-8 md:p-10">
+<p class="text-xs uppercase tracking-[0.35em] text-primary mb-4">05 / Deliver</p>
+<h3 class="font-headline-lg text-headline-lg text-pure-white mb-3">Install On Site</h3>
+<p class="text-text-muted leading-relaxed mb-6">Final pieces are delivered, aligned, and installed with the same care that was built into fabrication.</p>
+<div class="technical-readout flex justify-between gap-4 text-sm py-3"><span class="text-primary">Finish</span><span class="text-on-surface">Ready for handover</span></div>
+</article>
+</div>
+</div>
+</div>
+</section>
 <!-- Services Section -->
 <section class="py-section-padding bg-surface" id="services">
 <div class="max-w-container-max mx-auto px-mobile-margin">
@@ -266,13 +314,16 @@
 </div>
 </section>
 <!-- Projects Section -->
-<section class="py-section-padding bg-surface-container-lowest" id="projects">
+<section class="py-section-padding bg-surface-container-lowest overflow-hidden" id="projects">
 <div class="max-w-container-max mx-auto px-mobile-margin">
 <h2 class="font-headline-xl text-headline-xl mb-2 section-title">Featured Portfolio</h2>
 <div class="section-underline mb-12"></div>
-<div class="project-masonry" id="project-gallery">
+<p class="text-text-muted max-w-2xl mb-10 leading-relaxed">
+                    Keep scrolling to move through featured work horizontally. Each project card slides into view as the section pins in place.
+                </p>
+<div class="project-masonry pb-4" id="project-gallery">
 <!-- Project Item 1 -->
-<div class="masonry-item relative group overflow-hidden">
+<div class="masonry-item relative group overflow-hidden flex-none w-[85vw] sm:w-[420px]">
 <div class="aspect-video bg-metal-highlight relative overflow-hidden">
 <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
 <div class="absolute inset-0 flex items-center justify-center p-8">
@@ -285,7 +336,7 @@
 </div>
 </div>
 <!-- Project Item 2 -->
-<div class="masonry-item relative group overflow-hidden">
+<div class="masonry-item relative group overflow-hidden flex-none w-[85vw] sm:w-[420px]">
 <div class="aspect-square bg-metal-highlight relative overflow-hidden">
 <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')] opacity-30"></div>
 <div class="absolute inset-0 flex items-center justify-center p-8">
@@ -298,7 +349,7 @@
 </div>
 </div>
 <!-- Project Item 3 -->
-<div class="masonry-item relative group overflow-hidden">
+<div class="masonry-item relative group overflow-hidden flex-none w-[85vw] sm:w-[420px]">
 <div class="aspect-video bg-metal-highlight relative overflow-hidden">
 <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/diagonal-striped-brick.png')] opacity-20"></div>
 <div class="absolute inset-0 flex items-center justify-center p-8">
@@ -311,7 +362,7 @@
 </div>
 </div>
 <!-- Project Item 4 -->
-<div class="masonry-item relative group overflow-hidden">
+<div class="masonry-item relative group overflow-hidden flex-none w-[85vw] sm:w-[420px]">
 <div class="aspect-[4/5] bg-metal-highlight relative overflow-hidden">
 <div class="absolute inset-0 flex items-center justify-center p-8">
 <h4 class="font-headline-lg text-primary text-center">SHARJAH SPORTS CLUB</h4>
@@ -323,18 +374,18 @@
 </div>
 </div>
 <!-- More Projects placeholder -->
-<div class="masonry-item relative group overflow-hidden">
+<div class="masonry-item relative group overflow-hidden flex-none w-[85vw] sm:w-[420px]">
 <div class="aspect-video bg-metal-highlight flex items-center justify-center p-8">
 <h4 class="font-headline-lg text-primary text-center">EXPO 2020 STRUCTURES</h4>
 </div>
 </div>
-<div class="masonry-item relative group overflow-hidden">
+<div class="masonry-item relative group overflow-hidden flex-none w-[85vw] sm:w-[420px]">
 <div class="aspect-square bg-metal-highlight flex items-center justify-center p-8">
 <h4 class="font-headline-lg text-primary text-center">MEYDAN RACETRACK RAILS</h4>
 </div>
 </div>
 <!-- Display 47 count message -->
-<div class="masonry-item relative group overflow-hidden col-span-full">
+<div class="masonry-item relative group overflow-hidden flex-none w-[92vw] sm:w-[520px]">
 <div class="aspect-video bg-metal-highlight flex items-center justify-center border-2 border-dashed border-primary/30">
 <div class="text-center">
 <h4 class="font-headline-lg text-primary text-4xl">AND 41+ MORE PROJECTS</h4>
@@ -471,6 +522,26 @@
             lenis.scrollTo('#projects');
         });
 
+        // Horizontal process rail driven by vertical scroll
+        const processSection = document.getElementById('process');
+        const processRail = document.getElementById('process-rail');
+
+        if (processSection && processRail) {
+            gsap.to(processRail, {
+                x: () => -(processRail.scrollWidth - document.documentElement.clientWidth + 40),
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: processSection,
+                    start: 'top top',
+                    end: () => '+=' + (processRail.scrollWidth - document.documentElement.clientWidth + 120),
+                    scrub: 1,
+                    pin: true,
+                    anticipatePin: 1,
+                    invalidateOnRefresh: true
+                }
+            });
+        }
+
         // Nav Links Smooth Scroll
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', (e) => {
@@ -487,6 +558,7 @@
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 const filter = btn.getAttribute('data-filter');
+                const visibleCards = [];
                 
                 // Update button styles
                 filterBtns.forEach(b => {
@@ -506,17 +578,20 @@
                         serviceCards.forEach(card => {
                             if (filter === 'all' || card.getAttribute('data-category') === filter) {
                                 card.style.display = 'block';
+                                visibleCards.push(card);
                             } else {
                                 card.style.display = 'none';
                             }
                         });
-                        gsap.to(".service-card:visible", {
-                            scale: 1,
-                            opacity: 1,
-                            duration: 0.5,
-                            stagger: 0.05,
-                            ease: "back.out(1.2)"
-                        });
+                        if (visibleCards.length > 0) {
+                            gsap.to(visibleCards, {
+                                scale: 1,
+                                opacity: 1,
+                                duration: 0.5,
+                                stagger: 0.05,
+                                ease: "back.out(1.2)"
+                            });
+                        }
                     }
                 });
             });
@@ -559,19 +634,25 @@
             );
         });
 
-        // 5. Project Masonry Scale-in Animation
-        gsap.from(".masonry-item", {
-            scale: 0.8,
-            opacity: 0,
-            y: 30,
-            duration: 0.8,
-            stagger: 0.1,
-            ease: "power3.out",
-            scrollTrigger: {
-                trigger: ".project-masonry",
-                start: "top 80%"
-            }
-        });
+        // 5. Projects rail driven by vertical scroll
+        const projectSection = document.getElementById('projects');
+        const projectGallery = document.getElementById('project-gallery');
+
+        if (projectSection && projectGallery) {
+            gsap.to(projectGallery, {
+                x: () => -(projectGallery.scrollWidth - document.documentElement.clientWidth + 40),
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: projectSection,
+                    start: 'top top',
+                    end: () => '+=' + (projectGallery.scrollWidth - document.documentElement.clientWidth + 120),
+                    scrub: 1,
+                    pin: true,
+                    anticipatePin: 1,
+                    invalidateOnRefresh: true
+                }
+            });
+        }
 
         // Hero Entrance
         const tlHero = gsap.timeline();
@@ -582,4 +663,4 @@
         // Helper for selecting visible elements
         jQuery = (selector) => document.querySelectorAll(selector);
     </script>
-</body></html>
+</body></html>"}]}
